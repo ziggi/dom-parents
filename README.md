@@ -3,7 +3,8 @@ Get the parents of the element, optionally filtered by a selector.
 
 # Usage
 
-```JavaScript
+### Apply action to all parents elements
+```js
 import getParents from 'dom-parents';
 
 getParents(document.querySelector('#main'), '.cat').forEach((element) => {
@@ -11,7 +12,8 @@ getParents(document.querySelector('#main'), '.cat').forEach((element) => {
 })
 ```
 
-```JavaScript
+### Check for parents existing
+```js
 import getParents from 'dom-parents';
 
 document.querySelectorAll('.animal').forEach((element) => {

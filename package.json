@@ -1,0 +1,27 @@
+{
+  "name": "dom-parents",
+  "version": "1.0.0",
+  "description": "Get the parents of the element, optionally filtered by a selector.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziggi/dom-parents.git"
+  },
+  "keywords": [
+    "parents",
+    "dom-parents"
+  ],
+  "author": {
+    "name": "Sergei Marochkin",
+    "email": "me@ziggi.org",
+    "url": "https://ziggi.org"
+},
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziggi/dom-parents/issues"
+  },
+  "homepage": "https://github.com/ziggi/dom-parents#readme"
+}

@@ -1,7 +1,13 @@
 # dom-parents
 Get the parents of the element, optionally filtered by a selector.
 
-# Usage
+## Install
+
+```sh
+npm install --save dom-parents
+```
+
+## Usage
 
 ### Apply action to all parents elements
 ```js
@@ -27,3 +33,37 @@ document.querySelectorAll('.animal').forEach((element) => {
   });
 });
 ```
+
+### If the user clicks on a .item element
+```js
+import getParents from 'dom-parents';
+
+document.addEventListener('mousedown', (event) => {
+  const [item] = getParents(event.target, '.item', true);
+  if (item) {
+    console.log('mousedown on .item element');
+  }
+});
+```
+
+## API
+
+### getParents(element, selector, includeElement = false)
+
+#### element
+
+Type: `object`
+
+The element from which the search should start.
+
+#### selector
+
+Type: `string`
+
+Selector to search for the parent elements.
+
+#### includeElement
+
+Type: `bool`
+
+Include `element` to the search or not.

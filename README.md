@@ -66,4 +66,6 @@ Selector to search for the parent elements.
 
 Type: `bool`
 
+Default: `false`
+
 Include `element` to the search or not.

@@ -1,7 +1,7 @@
 export default (element, selector, includeElement = false) => {
+  const isWithSelector = selector !== undefined;
   const elements = [];
   let elem = element;
-  const isWithSelector = selector !== undefined;
 
   if (!includeElement) {
     elem = elem.parentElement;

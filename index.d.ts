@@ -1,2 +1,2 @@
-declare function getParents(element: HTMLElement, selector: string, includeElement?: boolean): HTMLElement[];
+declare function getParents(element: Element, selector: string, includeElement?: boolean): HTMLElement[];
 export default getParents;

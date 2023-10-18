@@ -1,20 +1,27 @@
+/**
+ * Get the parents of the element, optionally filtered by a selector.
+ *
+ * @param {HTMLElement} element - The element from which the search should start.
+ * @param {string} selector - Selector to search for the parent elements.
+ * @param {boolean} [includeElement=false] - Include `element` to the search or not.
+ */
 export default (element, selector, includeElement = false) => {
-  const isWithSelector = selector !== undefined;
+  const hasSelector = selector !== undefined;
   const elements = [];
-  let elem = element;
+  let el = element;
 
   if (!includeElement) {
-    elem = elem.parentElement;
+    el = el.parentElement;
   }
 
-  while (elem !== null) {
-    if (elem.nodeType === Node.ELEMENT_NODE) {
-      if (!isWithSelector || elem.matches(selector)) {
-        elements.push(elem);
+  while (el !== null) {
+    if (el.nodeType === Node.ELEMENT_NODE) {
+      if (!hasSelector || el.matches(selector)) {
+        elements.push(el);
       }
     }
 
-    elem = elem.parentElement;
+    el = el.parentElement;
   }
 
   return elements;

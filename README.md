@@ -1,4 +1,5 @@
 # dom-parents
+
 Get the parents of the element, optionally filtered by a selector.
 
 ## Install
@@ -7,9 +8,10 @@ Get the parents of the element, optionally filtered by a selector.
 npm install --save dom-parents
 ```
 
-## Usage
+## Examples
 
-### Apply action to all parents elements
+### Apply action to all parent elements
+
 ```js
 import getParents from 'dom-parents';
 
@@ -18,14 +20,15 @@ getParents(document.querySelector('#main'), '.cat').forEach((element) => {
 })
 ```
 
-### Check for parents existing
+### Check the existence of parents
+
 ```js
 import getParents from 'dom-parents';
 
 document.querySelectorAll('.animal').forEach((element) => {
   element.addEventListener('mousedown', () => {
-    const isBobAnimal = getParents(this, '.animals').length !== 0;
-    if (isBobAnimal) {
+    const isBobAnAnimal = getParents(this, '.animals').length !== 0;
+    if (isBobAnAnimal) {
       console.log('Bob is animal');
     } else {
       console.log('Bob is spy!');
@@ -34,7 +37,7 @@ document.querySelectorAll('.animal').forEach((element) => {
 });
 ```
 
-### If the user clicks on a .item element
+### If the user clicks on an `.item` element
 ```js
 import getParents from 'dom-parents';
 
@@ -49,6 +52,8 @@ document.addEventListener('mousedown', (event) => {
 ## API
 
 ### getParents(element, selector, includeElement = false)
+
+Returns the parents of the element, optionally filtered by a selector.
 
 #### element
 

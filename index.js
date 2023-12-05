@@ -2,7 +2,7 @@
  * Get the parents of the element, optionally filtered by a selector.
  *
  * @param {Element} element - The element from which the search should start.
- * @param {string} selector - Selector to search for the parent elements.
+ * @param {string} [selector] - Selector to search for the parent elements.
  * @param {boolean} [includeElement=false] - Include `element` to the search or not.
  */
 export default (element, selector, includeElement = false) => {
